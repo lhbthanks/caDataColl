@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean id="baseDao" abstract="true">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="newsDao" class="com.classnet.dao.impl.NewsDaoImpl" parent="baseDao"></bean>
+	<bean id="newsMenuDao" class="com.classnet.dao.impl.NewsMenuDaoImpl" parent="baseDao"></bean>
+	<bean id="clazzDao" class="com.classnet.dao.impl.ClazzDaoImpl" parent="baseDao"></bean>
+	<bean id="clazzMenuDao" class="com.classnet.dao.impl.ClazzMenuDaoImpl" parent="baseDao"></bean>
+	<bean id="fileTypeDao" class="com.classnet.dao.impl.FileTypeDaoImpl" parent="baseDao"></bean>
+	<bean id="sourceDao" class="com.classnet.dao.impl.SourceDaoImpl" parent="baseDao"></bean>
+	<bean id="sourceMenuDao" class="com.classnet.dao.impl.SourceMenuDaoImpl" parent="baseDao"></bean>
+	<bean id="userDao" class="com.classnet.dao.impl.UserDaoImpl" parent="baseDao"></bean>
+	<bean id="homeWorkTitleDao" class="com.classnet.dao.impl.HomeWorkTitleDaoImpl" parent="baseDao"></bean>
+	<bean id="userHomeWorkDao" class="com.classnet.dao.impl.UserHomeWorkDaoImpl" parent="baseDao"></bean>
+	<bean id="topicDao" class="com.classnet.dao.impl.TopicDaoImpl" parent="baseDao"></bean>
+	<bean id="topicMenuDao" class="com.classnet.dao.impl.TopicMenuDaoImpl" parent="baseDao"></bean>
+	<bean id="answerDao" class="com.classnet.dao.impl.AnswerDaoImpl" parent="baseDao"></bean>
+	<bean id="antifreezeDao" class="com.classnet.dao.impl.suzuki.AntifreezeDaoImpl" parent="baseDao"></bean>
+	<bean id="brakeFluidDurrDao" class="com.classnet.dao.impl.suzuki.BrakeFluidDurrDaoImpl" parent="baseDao"></bean>
+	<bean id="brakeFluidYhDao" class="com.classnet.dao.impl.suzuki.BrakeFluidYhDaoImpl" parent="baseDao"></bean>
+	<bean id="coolantDurrDao" class="com.classnet.dao.impl.suzuki.CoolantDurrDaoImpl" parent="baseDao"></bean>
+	<bean id="coolantYhDao" class="com.classnet.dao.impl.suzuki.CoolantYhDaoImpl" parent="baseDao"></bean>
+	<bean id="washingsDao" class="com.classnet.dao.impl.suzuki.WashingsDaoImpl" parent="baseDao"></bean>
+	<bean id="tightenMachineDao" class="com.classnet.dao.impl.suzuki.TightenMachineDaoImpl" parent="baseDao"></bean>
+	<bean id="transmissionoilDao" class="com.classnet.dao.impl.suzuki.TransmissionoilDaoImpl" parent="baseDao"></bean>
+	<bean id="detachmentDao" class="com.classnet.dao.impl.suzuki.DetachmentDaoImpl" parent="baseDao"></bean>
+	<bean id="airtightCheckDao" class="com.classnet.dao.impl.suzuki.AirtightCheckDaoImpl" parent="baseDao"></bean>
+	<bean id="a301Dao" class="com.classnet.dao.impl.suzuki.A301DaoImpl" parent="baseDao"></bean>
+</beans>
